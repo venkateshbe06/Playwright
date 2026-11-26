@@ -1,0 +1,2 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","4195","radio_check","chromium","2026-11-26","passed","2026-11-26","","training_class/radio_check.spec.ts","",""
