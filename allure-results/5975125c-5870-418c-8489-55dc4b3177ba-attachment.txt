@@ -1,0 +1,17 @@
+APIResponse: 200 OK
+  Date: Tue, 27 Oct 2026 11:35:33 GMT
+  Server: Apache/2.4.52 (Ubuntu)
+  X-Powered-By: Express
+  Access-Control-Allow-Origin: https://eventhub.rahulshettyacademy.com
+  Vary: Origin
+  Access-Control-Allow-Credentials: true
+  Content-Type: application/json; charset=utf-8
+  Content-Length: 270
+  ETag: W/"10e-I3cPJ8i1U/4psj29niyXd4e/ycU"
+  Keep-Alive: timeout=5, max=100
+  Connection: Keep-Alive
+{
+  success: true,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE4NzYsImVtYWlsIjoidHJlbmRzLjA2MjA4QGdtYWlsLmNvbSIsImlhdCI6MTc5MzEwMDkzMywiZXhwIjoxNzkzNzA1NzMzfQ.xiUI9_wXTl3LfQPy3B_S31P32SGbuuZnmE1I4-iLXvs',
+  user: { id: 1876, email: 'trends.06208@gmail.com' }
+}

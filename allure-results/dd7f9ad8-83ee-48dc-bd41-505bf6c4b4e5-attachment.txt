@@ -1,0 +1,19 @@
+APIResponse: 200 OK
+  Date: Fri, 30 Oct 2026 10:53:58 GMT
+  Server: Apache/2.4.52 (Ubuntu)
+  X-Powered-By: Express
+  Access-Control-Allow-Origin: https://eventhub.rahulshettyacademy.com
+  Vary: Origin
+  Access-Control-Allow-Credentials: true
+  Content-Type: application/json; charset=utf-8
+  Content-Length: 270
+  ETag: W/"10e-kUcT9iieMHHx6z+1HDbOKemaOVw"
+  Keep-Alive: timeout=5, max=100
+  Connection: Keep-Alive
+{
+  success: true,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE4NzYsImVtYWlsIjoidHJlbmRzLjA2MjA4QGdtYWlsLmNvbSIsImlhdCI6MTc5MzM1NzYzOCwiZXhwIjoxNzkzOTYyNDM4fQ.fAM-WPVZt4S9NpvcPbCB5BoPLllwW1APQ-qL0chJl0c',
+  user: { id: 1876, email: 'trends.06208@gmail.com' }
+}
+body token value ===  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE4NzYsImVtYWlsIjoidHJlbmRzLjA2MjA4QGdtYWlsLmNvbSIsImlhdCI6MTc5MzM1NzYzOCwiZXhwIjoxNzkzOTYyNDM4fQ.fAM-WPVZt4S9NpvcPbCB5BoPLllwW1APQ-qL0chJl0c
+jwtToken : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE4NzYsImVtYWlsIjoidHJlbmRzLjA2MjA4QGdtYWlsLmNvbSIsImlhdCI6MTc5MzM1NzY0MiwiZXhwIjoxNzkzOTYyNDQyfQ.k6ssdvxanONPPFQBaW57PCb7_WR38yKXRCfUJi9w5SU

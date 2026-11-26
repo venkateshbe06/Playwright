@@ -1,0 +1,12 @@
+{
+  bookingid: 143,
+  booking: {
+    firstname: 'Venkatesh',
+    lastname: 'N',
+    totalprice: 1000,
+    depositpaid: true,
+    bookingdates: { checkin: '2018-01-01', checkout: '2019-01-01' },
+    additionalneeds: 'Breakfast'
+  }
+}
+200

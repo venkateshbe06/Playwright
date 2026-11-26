@@ -1,0 +1,18 @@
+[
+    {
+        "UN" : "standard_user",
+        "pwd" : "secret_sauce"
+    },
+    {
+        "UN" : "standard",
+        "pwd" : "secret_sauce"
+    },
+    {
+        "UN" : "standard_user",
+        "pwd" : "sec"
+    },
+    {
+        "UN" : "",
+        "pwd" : "   "
+    }
+]

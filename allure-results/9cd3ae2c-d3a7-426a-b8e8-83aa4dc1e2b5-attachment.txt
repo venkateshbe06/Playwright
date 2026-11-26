@@ -1,0 +1,45 @@
+{
+  bookingid: 743,
+  booking: {
+    firstname: 'Venkatesh',
+    lastname: 'N',
+    totalprice: 111,
+    depositpaid: true,
+    bookingdates: { checkin: '2018-01-01', checkout: '2019-01-01' },
+    additionalneeds: 'Breakfast'
+  }
+}
+200
+{
+  'content-length': '198',
+  'content-type': 'application/json; charset=utf-8',
+  date: 'Sat, 24 Oct 2026 06:12:23 GMT',
+  etag: 'W/"c6-v6EKMd5NA9peG8T1lBOWM5nnBBs"',
+  nel: '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}',
+  'report-to': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=fvw6d8eJ3P%2FYo0vy8j1S2VUm833ljOULIKnKByS8wE0%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1792822343"}],"max_age":3600}',
+  'reporting-endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=fvw6d8eJ3P%2FYo0vy8j1S2VUm833ljOULIKnKByS8wE0%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1792822343"',
+  server: 'Heroku',
+  via: '1.1 heroku-router',
+  'x-powered-by': 'Express'
+}
+[
+  { name: 'Content-Length', value: '198' },
+  { name: 'Content-Type', value: 'application/json; charset=utf-8' },
+  { name: 'Date', value: 'Sat, 24 Oct 2026 06:12:23 GMT' },
+  { name: 'Etag', value: 'W/"c6-v6EKMd5NA9peG8T1lBOWM5nnBBs"' },
+  {
+    name: 'Nel',
+    value: '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
+  },
+  {
+    name: 'Report-To',
+    value: '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=fvw6d8eJ3P%2FYo0vy8j1S2VUm833ljOULIKnKByS8wE0%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1792822343"}],"max_age":3600}'
+  },
+  {
+    name: 'Reporting-Endpoints',
+    value: 'heroku-nel="https://nel.heroku.com/reports?s=fvw6d8eJ3P%2FYo0vy8j1S2VUm833ljOULIKnKByS8wE0%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1792822343"'
+  },
+  { name: 'Server', value: 'Heroku' },
+  { name: 'Via', value: '1.1 heroku-router' },
+  { name: 'X-Powered-By', value: 'Express' }
+]

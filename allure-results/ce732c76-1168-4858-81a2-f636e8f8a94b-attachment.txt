@@ -1,0 +1,13 @@
+APIResponse: 200 OK
+  Date: Tue, 27 Oct 2026 11:39:55 GMT
+  Server: Apache/2.4.52 (Ubuntu)
+  X-Powered-By: Express
+  Access-Control-Allow-Origin: https://eventhub.rahulshettyacademy.com
+  Vary: Origin
+  Access-Control-Allow-Credentials: true
+  Content-Type: application/json; charset=utf-8
+  Content-Length: 270
+  ETag: W/"10e-u8WhbEQLgdXmrfwINap8Fls415U"
+  Keep-Alive: timeout=5, max=100
+  Connection: Keep-Alive
+=== body response ===, [object Object]

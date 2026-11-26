@@ -1,0 +1,122 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: POM\Act_Test\describe.spec.ts >> API Chaining >> post method
+- Location: tests\POM\Act_Test\describe.spec.ts:9:7
+
+# Error details
+
+```
+Error: expect(received).toBeLessThan(expected)
+
+Expected: < 2000
+Received:   4081
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from "@playwright/test";
+  2  | 
+  3  | // to execute group of tests together - test.describe
+  4  | 
+  5  | test.describe("API Chaining", async () => {
+  6  |   test.describe.configure({ mode: "serial" }); // run serial mode (like workers = 1 )
+  7  |   console.log("=================================");
+  8  |   let bookingid: number;
+  9  |   test("post method", async ({ request }) => {
+  10 |     const start = Date.now();
+  11 |     const postresponse = await request.post("/booking", {
+  12 |       headers: { "Content-Type": "application/json" },
+  13 |       data: {
+  14 |         firstname: "Venkatesh",
+  15 |         lastname: "N",
+  16 |         totalprice: 1000,
+  17 |         depositpaid: true,
+  18 |         bookingdates: {
+  19 |           checkin: "2018-01-01",
+  20 |           checkout: "2019-01-01",
+  21 |         },
+  22 |         additionalneeds: "Breakfast",
+  23 |       },
+  24 |     });
+  25 |     const end = Date.now();
+  26 |     const responseTime = end - start;
+  27 |     const postPayload = await postresponse.json();
+  28 |     console.log(postPayload);
+  29 |     console.log(postresponse.status());
+  30 |     // validation status code
+  31 | 
+  32 |     expect(postresponse.status()).toBe(200);
+  33 |     expect(postresponse.statusText()).toBe("OK");
+  34 |     // response time
+> 35 |     expect.soft(responseTime).toBeLessThan(2000);
+     |                               ^ Error: expect(received).toBeLessThan(expected)
+  36 | 
+  37 |     // body validation
+  38 | 
+  39 |     expect(postPayload.bookingid).toBeDefined();
+  40 |     expect(typeof postPayload.bookingid).toBe("number");
+  41 |     expect(typeof postPayload.booking).toBe("object");
+  42 |     // expect(postPayload.booking.firstname).toBe("Mohanapriya");
+  43 |     expect(postPayload.booking.firstname).toBe("Venkatesh");
+  44 |   
+  45 |     expect(postPayload.booking.bookingdates.checkin).toBe("2018-01-01");
+  46 |     // header validation
+  47 |     console.log(postresponse.headers());
+  48 |     const harr = postresponse.headersArray();
+  49 |     console.log(harr);
+  50 |     expect(harr[1]["name"]).toBe("Content-Type");
+  51 | 
+  52 |     const hobj = postresponse.headers();
+  53 |     await expect(hobj["content-type"]).toContain("application/json");
+  54 |     bookingid = postPayload.bookingid;
+  55 | 
+  56 |     const bookingDetails = await request.get(`/booking/${bookingid}`);
+  57 |     console.log(await bookingDetails.json());
+  58 |   });
+  59 |   //put
+  60 | 
+  61 |   let token: string;
+  62 |   test("Create Token", async ({ request }) => {
+  63 |     const authResponse = await request.post("/auth", {
+  64 |       data: {
+  65 |         username: "admin",
+  66 |         password: "password123",
+  67 |       },
+  68 |       headers: { "Content-Type": "application/json" },
+  69 |     });
+  70 |     const data = await authResponse.json();
+  71 |     token = await data.token;
+  72 |     console.log(`===token===: ${token}`);
+  73 |   });
+  74 |   test("put method venkat", async ({ request }) => {
+  75 |     const updateResponse = await request.put(`/booking/${bookingid}`, {
+  76 |       headers: {
+  77 |         "Content-Type": "application/json",
+  78 |         Accept: "application/json",
+  79 |         Cookie: `token=${token}`,
+  80 |       },
+  81 |       data: {
+  82 |         firstname: "Venkatesh-Updated",
+  83 |         lastname: "N-Updated",
+  84 |         totalprice: 1000,
+  85 |         depositpaid: true,
+  86 |         bookingdates: {
+  87 |           checkin: "2018-01-01",
+  88 |           checkout: "2019-01-01",
+  89 |         },
+  90 |         additionalneeds: "Breakfast",
+  91 |       },
+  92 |     });
+  93 |     console.log(updateResponse);
+  94 |     console.log(await updateResponse.json());
+  95 |   });
+  96 |   console.log("============================================");
+  97 | });
+```
